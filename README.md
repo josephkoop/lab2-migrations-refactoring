@@ -1,3 +1,3 @@
-Joseph Koop
-Advanced Databases - Lab #1
-January 26, 2026
+Joseph Koop<br>
+Advanced Databases - Lab #2<br>
+February 2, 2026<br>
