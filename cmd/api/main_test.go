@@ -8,13 +8,14 @@ import (
 	"net/http/httptest"
 	"strings"
 	"testing"
+	"github.com/Joseph-Koop/lab2-josephkoop/internal/handlers"
 )
 
 func TestHomeHandler(t *testing.T) {
 	req := httptest.NewRequest(http.MethodGet, "/", nil)
 	rr := httptest.NewRecorder()
 
-	handler := http.HandlerFunc(home)
+	handler := http.HandlerFunc(handlers.Home)
 	handler.ServeHTTP(rr, req)
 
 	if rr.Code != http.StatusOK {
@@ -31,7 +32,7 @@ func TestAboutHandler(t *testing.T) {
 	req := httptest.NewRequest(http.MethodGet, "/about", nil)
 	rr := httptest.NewRecorder()
 
-	handler := http.HandlerFunc(about)
+	handler := http.HandlerFunc(handlers.About)
 	handler.ServeHTTP(rr, req)
 
 	if rr.Code != http.StatusOK {
@@ -48,7 +49,7 @@ func TestContactHandler(t *testing.T) {
 	req := httptest.NewRequest(http.MethodGet, "/contact", nil)
 	rr := httptest.NewRecorder()
 
-	handler := http.HandlerFunc(contact)
+	handler := http.HandlerFunc(handlers.Contact)
 	handler.ServeHTTP(rr, req)
 
 	if rr.Code != http.StatusOK {
@@ -65,7 +66,7 @@ func TestHobbyHandler(t *testing.T) {
 	req := httptest.NewRequest(http.MethodGet, "/hobby", nil)
 	rr := httptest.NewRecorder()
 
-	handler := http.HandlerFunc(hobby)
+	handler := http.HandlerFunc(handlers.Hobby)
 	handler.ServeHTTP(rr, req)
 
 	if rr.Code != http.StatusOK {
